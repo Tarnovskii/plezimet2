@@ -1,0 +1,3 @@
+let state = {
+    logged: false
+};
