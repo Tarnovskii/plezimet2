@@ -1,3 +1,3 @@
-let state = {
+export let state = {
     logged: false
 };

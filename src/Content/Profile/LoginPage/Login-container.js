@@ -4,6 +4,6 @@ import React from "react";
 
 export const LoginContainer = (props) => {
     if (props.device === "full")
-        return <PLoginr/>;
+        return <PLogin rerender={props.rerender}/>;
     else return <MLogin text={"No version for mobile"}/>
 };
