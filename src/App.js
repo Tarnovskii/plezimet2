@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {HeaderContainer} from './Header/Header-container'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(props) {
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <HeaderContainer device={props.device}/>
+                <Switch>
+                    <Route path="/search">
+                        SEARCH
+                    </Route>
+                    <Route path="/profile">
+                        PROFILE
+                    </Route>
+                    <Route path="/content">
+                        CONTENT
+                    </Route>
+                    <Route path="/ln">
+                        LANGUAGE
+                    </Route>
+                    <Route path="/">
+                        MAIN PAGE
+                    </Route>
+                </Switch>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
